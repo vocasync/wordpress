@@ -4,7 +4,7 @@ Tags: text-to-speech, tts, audio, accessibility, narration
 Requires at least: 6.2
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 0.1.8
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,9 +85,18 @@ Unchanged posts are never re-billed (content-hash deduplication).
 
 == Changelog ==
 
-= 0.1.8 =
-* Player theming: customize accent, highlight, surface, text, and border colors plus corner roundness from Settings, with Auto/Light/Dark color scheme.
+= 1.0.0 =
+First public release.
+* Per-post audio generation with a one-click button, or automatic generation on publish.
+* Word-level highlighting synchronised to the audio, with click-to-seek and autoscroll.
+* Floating mini-player; theme-agnostic player injected automatically, or placed precisely with the VocaSync block or the [vocasync] shortcode.
+* Player theming from Settings — accent, highlight, surface, text, and border colours plus corner roundness, with Auto/Light/Dark colour scheme.
 * Per-post overrides for player position (top/bottom) and individual control visibility (speed, volume, mini-player, highlighting, click-to-seek).
+* Content-hash deduplication, so unchanged posts are never re-billed.
+* Optional HMAC-signed webhook callbacks for job-completion notifications.
+* Spoken-form expansion of numbers, currency, and percentages in English; experimental support for several Latin-script European languages.
 
-= 0.1.0 =
-* Initial development release.
+== Upgrade Notice ==
+
+= 1.0.0 =
+First stable release of VocaSync for WordPress.

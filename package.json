@@ -1,6 +1,6 @@
 {
   "name": "@vocasync/wordpress",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "private": true,
   "description": "VocaSync for WordPress — block + player assets build.",
   "author": "Sayed Hamid Fatimi <sayedhfatimi@pm.me> (https://github.com/sayedhfatimi)",
