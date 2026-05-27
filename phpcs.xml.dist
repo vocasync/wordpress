@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<ruleset name="VocaSync">
+	<description>Coding standards for the VocaSync WordPress plugin.</description>
+
+	<!-- What to scan. -->
+	<file>vocasync.php</file>
+	<file>src</file>
+
+	<!-- What to ignore. -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/build/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+
+	<!-- Runtime args: progress, colours, PHP files only, parallel. -->
+	<arg value="ps"/>
+	<arg name="colors"/>
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="8"/>
+
+	<!-- Minimum WordPress version (drives deprecation sniffs). -->
+	<config name="minimum_wp_version" value="6.2"/>
+
+	<!-- WordPress-Extra = Core + Extra (style, security, best practices), without the
+	     WordPress-Docs sniffs that would force a docblock on every function. -->
+	<rule ref="WordPress-Extra">
+		<!-- src/ uses PSR-4 class file names, not WordPress's class-*.php convention. -->
+		<exclude name="WordPress.Files.FileName"/>
+		<!-- Exception messages are developer-facing, not page output; escape at the
+		     catch/echo site, not the throw site. -->
+		<exclude name="WordPress.Security.EscapeOutput.ExceptionNotEscaped"/>
+		<!-- Reading PHP DOM properties ($childNodes, $nodeValue, $tagName, …); their
+		     casing is fixed by PHP, not our code. -->
+		<exclude name="WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase"/>
+	</rule>
+
+	<!-- The plugin's text domain. -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="vocasync"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Global symbol prefixes (constants, functions, hooks). -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="VocaSync"/>
+				<element value="vocasync"/>
+				<element value="VOCASYNC"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

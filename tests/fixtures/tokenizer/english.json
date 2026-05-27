@@ -1,0 +1,359 @@
+[
+  {
+    "input": "0",
+    "expand": "zero",
+    "strip": "0",
+    "normalised": "zero",
+    "tokenCount": 1
+  },
+  {
+    "input": "7",
+    "expand": "seven",
+    "strip": "7",
+    "normalised": "seven",
+    "tokenCount": 1
+  },
+  {
+    "input": "42",
+    "expand": "forty two",
+    "strip": "42",
+    "normalised": "forty two",
+    "tokenCount": 2
+  },
+  {
+    "input": "100",
+    "expand": "one hundred",
+    "strip": "100",
+    "normalised": "one hundred",
+    "tokenCount": 2
+  },
+  {
+    "input": "1995",
+    "expand": "one thousand nine hundred ninety five",
+    "strip": "1995",
+    "normalised": "one thousand nine hundred ninety five",
+    "tokenCount": 6
+  },
+  {
+    "input": "1000000",
+    "expand": "one million",
+    "strip": "1000000",
+    "normalised": "one million",
+    "tokenCount": 2
+  },
+  {
+    "input": "-5",
+    "expand": "minus five",
+    "strip": "5",
+    "normalised": "minus five",
+    "tokenCount": 2
+  },
+  {
+    "input": "3.14",
+    "expand": "three point one four",
+    "strip": "3 14",
+    "normalised": "three point one four",
+    "tokenCount": 4
+  },
+  {
+    "input": "0.5",
+    "expand": "zero point five",
+    "strip": "0 5",
+    "normalised": "zero point five",
+    "tokenCount": 3
+  },
+  {
+    "input": "007",
+    "expand": "seven",
+    "strip": "007",
+    "normalised": "seven",
+    "tokenCount": 1
+  },
+  {
+    "input": "1,000",
+    "expand": "one thousand",
+    "strip": "1 000",
+    "normalised": "one thousand",
+    "tokenCount": 2
+  },
+  {
+    "input": "1,000,000",
+    "expand": "one million",
+    "strip": "1 000 000",
+    "normalised": "one million",
+    "tokenCount": 2
+  },
+  {
+    "input": "12345678901234567890",
+    "expand": "twelve quintillion three hundred forty five quadrillion six hundred seventy eight trillion nine hundred one billion two hundred thirty four million five hundred sixty seven thousand eight hundred ninety",
+    "strip": "12345678901234567890",
+    "normalised": "twelve quintillion three hundred forty five quadrillion six hundred seventy eight trillion nine hundred one billion two hundred thirty four million five hundred sixty seven thousand eight hundred ninety",
+    "tokenCount": 29
+  },
+  {
+    "input": "$50",
+    "expand": "fifty dollar",
+    "strip": "50",
+    "normalised": "fifty dollar",
+    "tokenCount": 2
+  },
+  {
+    "input": "€100",
+    "expand": "one hundred euro",
+    "strip": "100",
+    "normalised": "one hundred euro",
+    "tokenCount": 3
+  },
+  {
+    "input": "50$",
+    "expand": "fifty dollar",
+    "strip": "50",
+    "normalised": "fifty dollar",
+    "tokenCount": 2
+  },
+  {
+    "input": "£20",
+    "expand": "twenty pound",
+    "strip": "20",
+    "normalised": "twenty pound",
+    "tokenCount": 2
+  },
+  {
+    "input": "¥1000",
+    "expand": "one thousand yen",
+    "strip": "1000",
+    "normalised": "one thousand yen",
+    "tokenCount": 3
+  },
+  {
+    "input": "$0",
+    "expand": "zero dollar",
+    "strip": "0",
+    "normalised": "zero dollar",
+    "tokenCount": 2
+  },
+  {
+    "input": "it costs $1,000.50 today",
+    "expand": "it costs one thousand point five zero dollar today",
+    "strip": "it costs 1 000 50 today",
+    "normalised": "it costs one thousand point five zero dollar today",
+    "tokenCount": 9
+  },
+  {
+    "input": "price: $5 and €3",
+    "expand": "price: five dollar and three euro",
+    "strip": "price 5 and 3",
+    "normalised": "price five dollar and three euro",
+    "tokenCount": 6
+  },
+  {
+    "input": "₿1 is a lot",
+    "expand": "one bitcoin is a lot",
+    "strip": "1 is a lot",
+    "normalised": "one bitcoin is a lot",
+    "tokenCount": 5
+  },
+  {
+    "input": "50%",
+    "expand": "fifty percent",
+    "strip": "50",
+    "normalised": "fifty percent",
+    "tokenCount": 2
+  },
+  {
+    "input": "3.5%",
+    "expand": "three point five percent",
+    "strip": "3 5",
+    "normalised": "three point five percent",
+    "tokenCount": 4
+  },
+  {
+    "input": "100 %",
+    "expand": "one hundred percent",
+    "strip": "100",
+    "normalised": "one hundred percent",
+    "tokenCount": 3
+  },
+  {
+    "input": "up 12% today",
+    "expand": "up twelve percent today",
+    "strip": "up 12 today",
+    "normalised": "up twelve percent today",
+    "tokenCount": 4
+  },
+  {
+    "input": "I paid $50 for 3 items at 10% off.",
+    "expand": "I paid fifty dollar for three items at ten percent off.",
+    "strip": "i paid 50 for 3 items at 10 off",
+    "normalised": "i paid fifty dollar for three items at ten percent off",
+    "tokenCount": 11
+  },
+  {
+    "input": "The year 1995 was great.",
+    "expand": "The year one thousand nine hundred ninety five was great.",
+    "strip": "the year 1995 was great",
+    "normalised": "the year one thousand nine hundred ninety five was great",
+    "tokenCount": 10
+  },
+  {
+    "input": "She has 2 cats and 1 dog.",
+    "expand": "She has two cats and one dog.",
+    "strip": "she has 2 cats and 1 dog",
+    "normalised": "she has two cats and one dog",
+    "tokenCount": 7
+  },
+  {
+    "input": "Buy 2 for $10.99 (50% off!) — visit https://x.io",
+    "expand": "Buy two for ten point nine nine dollar (fifty percent off!) — visit https://x.io",
+    "strip": "buy 2 for 10 99 50 off visit",
+    "normalised": "buy two for ten point nine nine dollar fifty percent off visit",
+    "tokenCount": 12
+  },
+  {
+    "input": "don't can't it's I'm we'll",
+    "expand": "don't can't it's I'm we'll",
+    "strip": "don't can't it's i'm we'll",
+    "normalised": "don't can't it's i'm we'll",
+    "tokenCount": 5
+  },
+  {
+    "input": "'quoted' text",
+    "expand": "'quoted' text",
+    "strip": "quoted' text",
+    "normalised": "quoted' text",
+    "tokenCount": 2
+  },
+  {
+    "input": "rock 'n' roll",
+    "expand": "rock 'n' roll",
+    "strip": "rock n' roll",
+    "normalised": "rock n' roll",
+    "tokenCount": 3
+  },
+  {
+    "input": "“Hello” — world",
+    "expand": "“Hello” — world",
+    "strip": "hello world",
+    "normalised": "hello world",
+    "tokenCount": 2
+  },
+  {
+    "input": "it's a “test”…",
+    "expand": "it's a “test”...",
+    "strip": "it's a test",
+    "normalised": "it's a test",
+    "tokenCount": 3
+  },
+  {
+    "input": "em—dash and en–dash and minus −5",
+    "expand": "em—dash and en–dash and minus −five",
+    "strip": "em dash and en dash and minus 5",
+    "normalised": "em dash and en dash and minus five",
+    "tokenCount": 8
+  },
+  {
+    "input": "hello 😀 world",
+    "expand": "hello 😀 world",
+    "strip": "hello world",
+    "normalised": "hello world",
+    "tokenCount": 2
+  },
+  {
+    "input": "🎉 party time",
+    "expand": "🎉 party time",
+    "strip": "party time",
+    "normalised": "party time",
+    "tokenCount": 2
+  },
+  {
+    "input": "visit https://example.com/path?q=1 now",
+    "expand": "visit https://example.com/path?q=one now",
+    "strip": "visit now",
+    "normalised": "visit now",
+    "tokenCount": 2
+  },
+  {
+    "input": "email me at a.b+x@example.co.uk please",
+    "expand": "email me at a.b+x@example.co.uk please",
+    "strip": "email me at please",
+    "normalised": "email me at please",
+    "tokenCount": 4
+  },
+  {
+    "input": "ping @user here",
+    "expand": "ping @user here",
+    "strip": "ping here",
+    "normalised": "ping here",
+    "tokenCount": 2
+  },
+  {
+    "input": "www.test.org is a link",
+    "expand": "www.test.org is a link",
+    "strip": "is a link",
+    "normalised": "is a link",
+    "tokenCount": 3
+  },
+  {
+    "input": "café résumé naïve Zürich",
+    "expand": "café résumé naïve Zürich",
+    "strip": "cafe resume naive zurich",
+    "normalised": "cafe resume naive zurich",
+    "tokenCount": 4
+  },
+  {
+    "input": "",
+    "expand": "",
+    "strip": "",
+    "normalised": "",
+    "tokenCount": 0
+  },
+  {
+    "input": "   ",
+    "expand": " ",
+    "strip": "",
+    "normalised": "",
+    "tokenCount": 0
+  },
+  {
+    "input": "...",
+    "expand": "...",
+    "strip": "",
+    "normalised": "",
+    "tokenCount": 0
+  },
+  {
+    "input": "!!!",
+    "expand": "!!!",
+    "strip": "",
+    "normalised": "",
+    "tokenCount": 0
+  },
+  {
+    "input": "a-b-c",
+    "expand": "a-b-c",
+    "strip": "a b c",
+    "normalised": "a b c",
+    "tokenCount": 3
+  },
+  {
+    "input": "你好世界",
+    "expand": "你好世界",
+    "strip": "",
+    "normalised": "",
+    "tokenCount": 0
+  },
+  {
+    "input": "Привет мир",
+    "expand": "Привет мир",
+    "strip": "",
+    "normalised": "",
+    "tokenCount": 0
+  },
+  {
+    "input": "こんにちは",
+    "expand": "こんにちは",
+    "strip": "",
+    "normalised": "",
+    "tokenCount": 0
+  }
+]

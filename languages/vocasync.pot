@@ -1,0 +1,394 @@
+# Copyright (C) 2026 Sayed Hamid Fatimi
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: VocaSync 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/app\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-05-27T01:04:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: vocasync\n"
+
+#. Plugin Name of the plugin
+#: vocasync.php
+#: src/Settings/Settings.php:125
+#: src/Settings/Settings.php:126
+#: src/Settings/views/settings-page.php:20
+#: assets/js/editor.js:208
+msgid "VocaSync"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: vocasync.php
+msgid "https://vocasync.io"
+msgstr ""
+
+#. Description of the plugin
+#: vocasync.php
+msgid "Turn posts into narrated audio with word-level highlighting, powered by VocaSync."
+msgstr ""
+
+#. Author of the plugin
+#: vocasync.php
+msgid "Sayed Hamid Fatimi"
+msgstr ""
+
+#. Author URI of the plugin
+#: vocasync.php
+msgid "https://github.com/sayedhfatimi"
+msgstr ""
+
+#: src/Editor/Editor.php:95
+msgid "VocaSync Audio"
+msgstr ""
+
+#: src/Editor/Editor.php:107
+#: assets/js/editor.js:155
+msgid "Generate audio"
+msgstr ""
+
+#: src/Editor/Editor.php:114
+#: assets/js/editor.js:57
+#: assets/js/editor.js:61
+#: assets/js/meta-box.js:32
+msgid "Audio ready."
+msgstr ""
+
+#: src/Editor/Editor.php:117
+msgid "Generating…"
+msgstr ""
+
+#: src/Editor/Editor.php:119
+#: assets/js/editor.js:59
+#: assets/js/meta-box.js:27
+msgid "Generation failed."
+msgstr ""
+
+#: src/Editor/Editor.php:121
+#: assets/js/editor.js:61
+#: assets/js/meta-box.js:32
+msgid "No audio yet."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:64
+msgid "Post not found."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:70
+msgid "Add your VocaSync API key in Settings → VocaSync first."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:78
+#: assets/js/editor.js:129
+msgid "This language is not yet supported for highlighting."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:87
+msgid "No speakable text was found in this post."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:93
+msgid "This post is too long to synthesize."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:164
+msgid "Synthesis did not return a project id."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:192
+msgid "Audio generation timed out."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:234
+msgid "Synthesis failed."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:304
+msgid "Alignment failed."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:458
+msgid "Your VocaSync API key was rejected. Check it in Settings → VocaSync."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:461
+msgid "Your VocaSync balance is too low to generate this audio."
+msgstr ""
+
+#: src/Generation/Orchestrator.php:464
+msgid "VocaSync is rate-limiting requests; will retry shortly."
+msgstr ""
+
+#: src/Render/views/player.php:20
+msgid "Listen to this article"
+msgstr ""
+
+#: src/Render/views/player.php:40
+msgid "Loading audio…"
+msgstr ""
+
+#: src/Render/views/player.php:44
+msgid "Audio not available for this article"
+msgstr ""
+
+#: src/Render/views/player.php:48
+#: src/Render/views/player.php:92
+msgid "Play"
+msgstr ""
+
+#: src/Render/views/player.php:48
+msgid "Play/Pause (Space)"
+msgstr ""
+
+#: src/Render/views/player.php:59
+msgid "Seek"
+msgstr ""
+
+#: src/Render/views/player.php:63
+msgid "Toggle word highlighting"
+msgstr ""
+
+#: src/Render/views/player.php:63
+msgid "Toggle highlighting (H)"
+msgstr ""
+
+#: src/Render/views/player.php:69
+msgid "Playback speed"
+msgstr ""
+
+#: src/Render/views/player.php:81
+msgid "Toggle mute"
+msgstr ""
+
+#: src/Render/views/player.php:81
+msgid "Toggle mute (M)"
+msgstr ""
+
+#: src/Render/views/player.php:85
+msgid "Volume"
+msgstr ""
+
+#: src/Render/views/player.php:98
+msgid "Close mini player"
+msgstr ""
+
+#: src/Rest/Controller.php:141
+msgid "No API key configured."
+msgstr ""
+
+#. translators: %s: formatted balance
+#: src/Rest/Controller.php:150
+#, php-format
+msgid "Connected. Balance: %s."
+msgstr ""
+
+#: src/Rest/Controller.php:151
+msgid "unknown"
+msgstr ""
+
+#: src/Rest/Controller.php:153
+msgid "The API key was rejected."
+msgstr ""
+
+#. translators: %s: vocasync.io link
+#: src/Settings/views/settings-page.php:25
+#, php-format
+msgid "Generate narrated audio for your posts with word-level highlighting. Get an API key at %s."
+msgstr ""
+
+#: src/Settings/views/settings-page.php:34
+msgid "API credentials"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:37
+msgid "API key"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:40
+msgid "Set via the VOCASYNC_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: src/Settings/views/settings-page.php:45
+msgid "Test connection"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:51
+msgid "Webhook signing secret"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:54
+msgid "Set via the VOCASYNC_WEBHOOK_SECRET constant in wp-config.php."
+msgstr ""
+
+#: src/Settings/views/settings-page.php:61
+msgid "The whsec_… secret shown once when you created your API key. Required for instant completion via webhooks; without it, the plugin falls back to polling."
+msgstr ""
+
+#: src/Settings/views/settings-page.php:64
+msgid "Webhook receiver URL (set automatically per job):"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:69
+msgid "This site is not served over HTTPS, so VocaSync cannot deliver webhooks here. Generation will use polling instead."
+msgstr ""
+
+#: src/Settings/views/settings-page.php:76
+msgid "Defaults"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:79
+#: assets/js/editor.js:163
+msgid "Voice"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:91
+#: assets/js/editor.js:174
+msgid "Language"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:100
+msgid "English is fully supported. Other Latin-script languages are experimental. Cyrillic and CJK languages are not yet supported for highlighting."
+msgstr ""
+
+#: src/Settings/views/settings-page.php:104
+msgid "Quality"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:107
+msgid "Standard"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:108
+msgid "High (premium)"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:113
+msgid "Audio format"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:123
+msgid "Player position"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:125
+msgid "Top of content"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:126
+msgid "Bottom of content"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:127
+msgid "Ignored when you place a VocaSync block or [vocasync] shortcode in the post."
+msgstr ""
+
+#: src/Settings/views/settings-page.php:132
+msgid "Player features"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:135
+msgid "Features"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:137
+msgid "Word-level highlighting"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:138
+msgid "Click a word to seek"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:139
+msgid "Floating mini-player"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:143
+msgid "Auto-generate"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:145
+msgid "Generate audio automatically when a post is published or updated"
+msgstr ""
+
+#: src/Settings/views/settings-page.php:146
+msgid "Default for new posts; can be overridden per post. Unchanged content is never re-billed."
+msgstr ""
+
+#: vocasync.php:43
+msgid "VocaSync is missing its dependencies. Run \"composer install\" in the plugin directory."
+msgstr ""
+
+#: assets/js/editor.js:23
+msgid "VocaSync Player"
+msgstr ""
+
+#: assets/js/editor.js:24
+msgid "Place the VocaSync audio player here."
+msgstr ""
+
+#: assets/js/editor.js:41
+msgid "VocaSync audio player (rendered on the front end)"
+msgstr ""
+
+#: assets/js/editor.js:53
+#: assets/js/meta-box.js:23
+msgid "Synthesizing speech…"
+msgstr ""
+
+#: assets/js/editor.js:55
+#: assets/js/meta-box.js:25
+msgid "Aligning words…"
+msgstr ""
+
+#: assets/js/editor.js:125
+msgid "Add your VocaSync API key in Settings → VocaSync."
+msgstr ""
+
+#: assets/js/editor.js:140
+msgid "The post content has changed since the audio was generated. Regenerate to update it."
+msgstr ""
+
+#: assets/js/editor.js:155
+msgid "Regenerate audio"
+msgstr ""
+
+#: assets/js/editor.js:187
+msgid "Auto-generate on publish"
+msgstr ""
+
+#: assets/js/editor.js:197
+msgid "Enable audio for this post"
+msgstr ""
+
+#: assets/js/meta-box.js:30
+msgid "Audio is out of date — content changed. Regenerate to update."
+msgstr ""
+
+#: assets/js/meta-box.js:57
+msgid "Starting…"
+msgstr ""
+
+#: assets/js/meta-box.js:66
+msgid "Could not start generation."
+msgstr ""
+
+#: assets/js/settings.js:17
+msgid "Testing…"
+msgstr ""
+
+#: assets/js/settings.js:21
+msgid "Connected."
+msgstr ""
+
+#: assets/js/settings.js:21
+msgid "Failed."
+msgstr ""
+
+#: assets/js/settings.js:25
+msgid "Connection test failed."
+msgstr ""

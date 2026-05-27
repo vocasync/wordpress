@@ -1,0 +1,56 @@
+{
+  "name": "vocasync/wordpress",
+  "description": "VocaSync for WordPress — text-to-speech synthesis with word-level highlighting.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Sayed Hamid Fatimi",
+      "email": "sayedhfatimi@pm.me",
+      "homepage": "https://github.com/sayedhfatimi"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "woocommerce/action-scheduler": "^3.8",
+    "symfony/polyfill-intl-normalizer": "^1.31"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.0",
+    "phpunit/phpunit": "^9.6",
+    "squizlabs/php_codesniffer": "^3.11",
+    "szepeviktor/phpstan-wordpress": "^2.0",
+    "wp-coding-standards/wpcs": "^3.1",
+    "yoast/phpunit-polyfills": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "VocaSync\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "VocaSync\\Tests\\": "tests/php/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpstan/extension-installer": true
+    },
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "platform": {
+      "php": "8.0"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "lint": "phpcs",
+    "lint:fix": "phpcbf",
+    "analyse": "phpstan analyse"
+  }
+}

@@ -1,0 +1,21 @@
+parameters:
+	level: 5
+	paths:
+		- vocasync.php
+		- src
+	# Action Scheduler ships as a library and is loaded at runtime; index its
+	# symbols so the function_exists()-guarded calls resolve.
+	scanDirectories:
+		- vendor/woocommerce/action-scheduler
+	# Declares the plugin's define()-d constants (PHPStan doesn't collect those).
+	bootstrapFiles:
+		- tests/phpstan-bootstrap.php
+	# The regex ignore below only fires on PCRE builds lacking
+	# \p{Extended_Pictographic}; modern runners won't match it, so don't fail.
+	reportUnmatchedIgnoredErrors: false
+	ignoreErrors:
+		# strip_emoji() probes \p{Extended_Pictographic} support at runtime and
+		# falls back; the pattern is valid on modern PCRE2 but not the analysis env.
+		-
+			identifier: regexp.pattern
+			path: src/Tokenizer/SpokenForm.php

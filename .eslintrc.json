@@ -1,0 +1,21 @@
+{
+	"root": true,
+	"extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"prettier/prettier": "off",
+		"no-bitwise": "off",
+		"jsdoc/require-param": "off",
+		"jsdoc/require-param-type": "off"
+	},
+	"overrides": [
+		{
+			"files": [ "scripts/**", "tests/**" ],
+			"rules": {
+				"no-console": "off"
+			}
+		}
+	]
+}

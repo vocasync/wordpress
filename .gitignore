@@ -1,0 +1,8 @@
+/vendor/
+/node_modules/
+/build/
+/.superpowers/
+/docs/superpowers/
+*.log
+.DS_Store
+.phpunit.result.cache

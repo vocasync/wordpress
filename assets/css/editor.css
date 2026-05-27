@@ -1,0 +1,19 @@
+.vocasync-card { border-radius: 6px; padding: 10px 12px; margin: 0 0 12px; }
+.vocasync-card__title { font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.vocasync-card__sub { font-size: 12px; margin-top: 3px; opacity: 0.85; }
+.vocasync-card.is-idle    { background: #f0f0f1; color: #50575e; }
+.vocasync-card.is-gen     { background: #eef4ff; color: #1d4ed8; }
+.vocasync-card.is-ready   { background: #edfaef; color: #0a7c2f; }
+.vocasync-card.is-stale   { background: #fcf3e6; color: #9a6700; }
+.vocasync-card.is-failed  { background: #fdeceb; color: #b32d2e; }
+.vocasync-progress { height: 6px; border-radius: 999px; background: #dbe4ff; margin-top: 8px; overflow: hidden; }
+.vocasync-progress > span { display: block; height: 100%; background: #1d4ed8; transition: width 200ms linear; }
+.vocasync-progress.is-indeterminate > span { width: 35% !important; animation: vocasync-indef 1.1s ease-in-out infinite; }
+@keyframes vocasync-indef { 0% { margin-left: -35%; } 100% { margin-left: 100%; } }
+.vocasync-info { font-size: 12px; color: #787c82; margin: 6px 0 10px; }
+.vocasync-panel .components-button.is-primary { width: 100%; justify-content: center; }
+.vocasync-panel .components-button.is-secondary { width: 100%; justify-content: center; }
+/* Settings disclosure: space the voice/language selects and toggles apart. */
+.vocasync-panel .components-base-control,
+.vocasync-panel .components-toggle-control { margin-bottom: 14px; }
+.vocasync-panel .components-toggle-control:last-child { margin-bottom: 0; }

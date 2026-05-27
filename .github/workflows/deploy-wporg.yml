@@ -1,0 +1,43 @@
+name: Deploy to WordPress.org
+
+# Inert scaffold. The first WordPress.org submission is manual. Enable this only
+# AFTER the plugin is approved on WordPress.org AND these are configured:
+#   - Repository secrets: SVN_USERNAME, SVN_PASSWORD (your WP.org account)
+#   - Repository variable:  WPORG_DEPLOY_ENABLED = true
+# Then optionally uncomment the `release` trigger so tagged releases auto-deploy.
+
+on:
+  workflow_dispatch:
+  # release:
+  #   types: [ published ]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: SVN deploy
+    runs-on: ubuntu-latest
+    # Guard keeps the workflow inert until explicitly enabled.
+    if: ${{ vars.WPORG_DEPLOY_ENABLED == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          coverage: none
+          tools: composer:v2
+      - name: Build plugin (production deps only)
+        run: bash scripts/build-zip.sh
+      - name: Deploy to WordPress.org SVN
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        with:
+          generate-zip: false
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: vocasync
+          # Deploy the pre-built directory (bundles the production vendor/).
+          BUILD_DIR: ${{ github.workspace }}/build/vocasync
+          # Listing artwork (icon/banner/screenshots) lives here.
+          ASSETS_DIR: ${{ github.workspace }}/.wordpress-org

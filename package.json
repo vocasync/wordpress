@@ -1,0 +1,20 @@
+{
+  "name": "@vocasync/wordpress",
+  "version": "0.1.8",
+  "private": true,
+  "description": "VocaSync for WordPress — block + player assets build.",
+  "author": "Sayed Hamid Fatimi <sayedhfatimi@pm.me> (https://github.com/sayedhfatimi)",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "lint:js": "wp-scripts lint-js",
+    "format": "wp-scripts format",
+    "test:js": "node --test tests/js/*.test.js",
+    "fixtures": "bun run scripts/gen-tokenizer-fixtures.ts",
+    "env:start": "wp-env start",
+    "env:stop": "wp-env stop"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^10.0.0",
+    "@wordpress/scripts": "^30.0.0"
+  }
+}
