@@ -4,7 +4,7 @@ Tags: text-to-speech, tts, audio, accessibility, narration
 Requires at least: 6.2
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -85,6 +85,11 @@ Unchanged posts are never re-billed (content-hash deduplication).
 
 == Changelog ==
 
+= 1.1.0 =
+* 45 new VocaSync voices; the default is now Slate.
+* The previous voice names (alloy, onyx and the rest) keep working and map to their new voices until 31 March 2027. Existing audio is not regenerated.
+* Saved voice settings carry over automatically.
+
 = 1.0.0 =
 First public release.
 * Per-post audio generation with a one-click button, or automatic generation on publish.
@@ -97,6 +102,9 @@ First public release.
 * Spoken-form expansion of numbers, currency, and percentages in English; experimental support for several Latin-script European languages.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Adds VocaSync's 45 new voices. Existing audio and saved voice settings are kept.
 
 = 1.0.0 =
 First stable release of VocaSync for WordPress.
