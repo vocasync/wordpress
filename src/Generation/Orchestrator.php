@@ -433,7 +433,7 @@ final class Orchestrator {
 		$language = isset( $o['language'] ) && in_array( $o['language'], Constants::HIGHLIGHT_LANGUAGES, true )
 			? (string) $o['language']
 			: $this->settings->default_language();
-		$voice    = isset( $o['voice'] ) && in_array( $o['voice'], Constants::VOICES, true )
+		$voice    = isset( $o['voice'] ) && in_array( $o['voice'], Constants::accepted_voices(), true )
 			? (string) $o['voice']
 			: $this->settings->default_voice();
 		$format   = isset( $o['format'] ) && in_array( $o['format'], Constants::FORMATS, true )

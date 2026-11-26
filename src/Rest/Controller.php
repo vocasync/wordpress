@@ -112,7 +112,7 @@ final class Controller {
 		$input   = is_array( $input ) ? $input : array();
 
 		$overrides = array();
-		if ( isset( $input['voice'] ) && in_array( $input['voice'], Constants::VOICES, true ) ) {
+		if ( isset( $input['voice'] ) && in_array( $input['voice'], Constants::accepted_voices(), true ) ) {
 			$overrides['voice'] = (string) $input['voice'];
 		}
 		if ( isset( $input['language'] ) && in_array( $input['language'], Constants::HIGHLIGHT_LANGUAGES, true ) ) {

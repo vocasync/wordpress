@@ -79,9 +79,9 @@ return static function ( Settings $settings ): void {
 					<th scope="row"><label for="vocasync-voice"><?php esc_html_e( 'Voice', 'vocasync' ); ?></label></th>
 					<td>
 						<select id="vocasync-voice" name="<?php echo esc_attr( "{$option}[voice]" ); ?>">
-							<?php foreach ( Constants::VOICES as $voice ) : ?>
+							<?php foreach ( Constants::accepted_voices() as $voice ) : ?>
 								<option value="<?php echo esc_attr( $voice ); ?>" <?php selected( $settings->default_voice(), $voice ); ?>>
-									<?php echo esc_html( ucfirst( $voice ) . ' — ' . Constants::VOICE_DESCRIPTIONS[ $voice ] ); ?>
+									<?php echo esc_html( Constants::voice_label( $voice ) . ' — ' . Constants::VOICE_DESCRIPTIONS[ $voice ] ); ?>
 								</option>
 							<?php endforeach; ?>
 						</select>

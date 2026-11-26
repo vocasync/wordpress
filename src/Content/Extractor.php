@@ -7,6 +7,7 @@ namespace VocaSync\Content;
 use DOMElement;
 use DOMNode;
 use DOMText;
+use VocaSync\Constants;
 use VocaSync\Tokenizer\SpokenForm;
 
 /**
@@ -129,6 +130,11 @@ final class Extractor {
 	 * format])). Keys on the spoken transcript (the article body words, with the
 	 * player/code/images skipped) so markup-only edits — including adding the
 	 * VocaSync player block — don't invalidate the audio. Mirrors the Astro recipe.
+	 *
+	 * The voice goes in as its hash key (see Constants::hash_voice_key), so a
+	 * legacy voice name and the VocaSync voice that replaced it hash identically.
+	 * Every hash check (generate, is_stale, the render-time check) goes through
+	 * here, which keeps them all in step.
 	 */
 	public static function content_hash(
 		string $normalised_speechtext,
@@ -136,7 +142,7 @@ final class Extractor {
 		string $language,
 		string $format
 	): string {
-		$payload = (string) wp_json_encode( array( $normalised_speechtext, $voice, $language, $format ) );
+		$payload = (string) wp_json_encode( array( $normalised_speechtext, Constants::hash_voice_key( $voice ), $language, $format ) );
 		return hash( 'sha256', $payload );
 	}
 }

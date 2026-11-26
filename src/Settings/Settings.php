@@ -192,7 +192,7 @@ final class Settings {
 		$clean['api_key']        = isset( $input['api_key'] ) ? trim( sanitize_text_field( (string) $input['api_key'] ) ) : '';
 		$clean['webhook_secret'] = isset( $input['webhook_secret'] ) ? trim( sanitize_text_field( (string) $input['webhook_secret'] ) ) : '';
 
-		$clean['voice']    = $this->pick( $input['voice'] ?? '', Constants::VOICES, $defaults['voice'] );
+		$clean['voice']    = $this->pick( $input['voice'] ?? '', Constants::accepted_voices(), $defaults['voice'] );
 		$clean['quality']  = $this->pick( $input['quality'] ?? '', Constants::QUALITIES, $defaults['quality'] );
 		$clean['format']   = $this->pick( $input['format'] ?? '', Constants::FORMATS, $defaults['format'] );
 		$clean['language'] = $this->pick( $input['language'] ?? '', Constants::HIGHLIGHT_LANGUAGES, $defaults['language'] );

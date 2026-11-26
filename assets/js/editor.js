@@ -92,7 +92,8 @@
 		let sub = '';
 		if ( 'is-ready' === st.cls ) {
 			sub = ( ( data.languages.find && data.languages.find( function ( l ) { return l.value === s.language; } ) ) || {} ).label || s.language;
-			sub += ' · ' + ( ( s.overrides && s.overrides.voice ) || data.defaults.voice );
+			const voiceId = ( s.overrides && s.overrides.voice ) || data.defaults.voice;
+			sub += ' · ' + ( ( data.voices.find && data.voices.find( function ( v ) { return v.value === voiceId; } ) ) || {} ).label || voiceId;
 			if ( s.duration ) {
 				sub += ' · ' + F.formatDuration( s.duration );
 			}

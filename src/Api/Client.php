@@ -51,7 +51,7 @@ final class Client {
 		$fields = array(
 			'textType'     => 'text',
 			'text'         => $params['text'],
-			'voice'        => $params['voice'],
+			'voice'        => Constants::send_voice( $params['voice'] ),
 			'quality'      => $params['quality'],
 			'language'     => $params['language'],
 			'outputFormat' => $params['outputFormat'],

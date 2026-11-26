@@ -65,10 +65,10 @@ final class Editor {
 			);
 		}
 		$voices = array();
-		foreach ( Constants::VOICES as $voice ) {
+		foreach ( Constants::accepted_voices() as $voice ) {
 			$voices[] = array(
 				'value' => $voice,
-				'label' => ucfirst( $voice ),
+				'label' => Constants::voice_label( $voice ),
 				'desc'  => Constants::VOICE_DESCRIPTIONS[ $voice ],
 			);
 		}
