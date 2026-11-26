@@ -171,7 +171,6 @@ final class VoiceMigrationTest extends TestCase {
 		$settings = new Settings();
 		$renderer = new PlayerRenderer( new Artifact(), $settings, new WordWrapper(), $extractor );
 		$prepare  = new ReflectionMethod( $renderer, 'prepare' );
-		$prepare->setAccessible( true );
 		$result = $prepare->invoke( $renderer, 7, $this->html() );
 
 		$this->assertIsArray( $result );
@@ -190,7 +189,6 @@ final class VoiceMigrationTest extends TestCase {
 		);
 		$renderer = new PlayerRenderer( new Artifact(), new Settings(), new WordWrapper(), $extractor );
 		$prepare  = new ReflectionMethod( $renderer, 'prepare' );
-		$prepare->setAccessible( true );
 		$result = $prepare->invoke( $renderer, 7, $this->html() );
 		$this->assertFalse( $result['highlight'] );
 	}
